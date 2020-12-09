@@ -18,21 +18,21 @@ function playGame(playerInput){
   function displayResult(argComputerMove, argPlayerMove){
     console.log('Function displayResult with arguments: ' + argComputerMove +', '+ argPlayerMove + ' was called')
     if (argComputerMove == 'rock' && argPlayerMove == 'paper'){
-      printMessage('YOU WON');
+      printMessage('YOU WON!');
     } else if (argComputerMove =='rock' && argPlayerMove == 'scissors'){
-      printMessage('YOU LOST');
+      printMessage('YOU LOST :(');
     } else if (argComputerMove =='rock' && argPlayerMove == 'rock'){
       printMessage('DRAW');
     } else if (argComputerMove =='paper' && argPlayerMove == 'rock'){
-      printMessage('YOU LOST');
+      printMessage('YOU LOST :(');
     } else if (argComputerMove =='paper' && argPlayerMove == 'scissors'){
-      printMessage('YOU WON');
+      printMessage('YOU WON!');
     } else if (argComputerMove =='paper' && argPlayerMove == 'paper'){
       printMessage('DRAW');
     } else if (argComputerMove =='scissors' && argPlayerMove == 'paper'){
-      printMessage('YOU LOST');
+      printMessage('YOU LOST :(');
     } else if (argComputerMove =='scissors' && argPlayerMove == 'rock'){
-      printMessage('YOU WON');
+      printMessage('YOU WON!');
     } else if (argComputerMove=='scissors' && argPlayerMove == 'scissors'){
       printMessage('DRAW');
     } else {

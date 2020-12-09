@@ -6,6 +6,7 @@ header {
   font-size: 25px;
   font-family: "Lobster", cursive;
   letter-spacing: 5px;
+  color: #1E8449;
 }
 
 .container button {
@@ -44,6 +45,6 @@ header {
 .container #messages div:nth-of-type(3) {
   font-weight: bold;
   font-size: 30px;
-  color: #F1948A;
+  color: #F5B041;
 }
 /*# sourceMappingURL=style.css.map */

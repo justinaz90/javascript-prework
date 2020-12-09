@@ -18,23 +18,23 @@ function playGame(playerInput){
   function displayResult(argComputerMove, argPlayerMove){
     console.log('Function displayResult with arguments: ' + argComputerMove +', '+ argPlayerMove + ' was called')
     if (argComputerMove == 'rock' && argPlayerMove == 'paper'){
-      printMessage('You WON');
+      printMessage('YOU WON');
     } else if (argComputerMove =='rock' && argPlayerMove == 'scissors'){
-      printMessage('You LOST');
+      printMessage('YOU LOST');
     } else if (argComputerMove =='rock' && argPlayerMove == 'rock'){
-      printMessage('Draw');
+      printMessage('DRAW');
     } else if (argComputerMove =='paper' && argPlayerMove == 'rock'){
-      printMessage('You LOST');
+      printMessage('YOU LOST');
     } else if (argComputerMove =='paper' && argPlayerMove == 'scissors'){
-      printMessage('You WON');
+      printMessage('YOU WON');
     } else if (argComputerMove =='paper' && argPlayerMove == 'paper'){
-      printMessage('Draw');
+      printMessage('DRAW');
     } else if (argComputerMove =='scissors' && argPlayerMove == 'paper'){
-      printMessage('You LOST');
+      printMessage('YOU LOST');
     } else if (argComputerMove =='scissors' && argPlayerMove == 'rock'){
-      printMessage('You WON');
+      printMessage('YOU WON');
     } else if (argComputerMove=='scissors' && argPlayerMove == 'scissors'){
-      printMessage('Draw');
+      printMessage('DRAW');
     } else {
       printMessage('Choose a number between 1 and 3')
     }

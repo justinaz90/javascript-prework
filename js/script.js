@@ -2,57 +2,57 @@ function playGame(playerInput){
   clearMessages();
 
   function getMoveName(argMoveId){
-    console.log('Wywołano funkcję getMoveName z argumentem : '+ argMoveId)
+    console.log('Function getMoveName with argument: '+ argMoveId + ' was called')
     if (argMoveId == 1){
-      return 'kamień';
+      return 'rock';
     } else if(argMoveId == 2){
-      return 'papier';
+      return 'paper';
     } else if(argMoveId == 3){
-      return 'nożyce';
+      return 'scissors';
     } else {
-      printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-      return 'nieznany ruch';
+      printMessage('Unknown move with id ' + argMoveId + '.');
+      return 'unknown move';
     }
   }
 
   function displayResult(argComputerMove, argPlayerMove){
-    console.log('Wywołano funkcję displayResult z argumentami: ' + argComputerMove +', '+ argPlayerMove)
-    if (argComputerMove == 'kamień' && argPlayerMove == 'papier'){
-      printMessage('Ty wygrywasz!');
-    } else if (argComputerMove =='kamień' && argPlayerMove == 'nożyce'){
-      printMessage('Ja wygrywam!');
-    } else if (argComputerMove =='kamień' && argPlayerMove == 'kamień'){
-      printMessage('Remis!');
-    } else if (argComputerMove =='papier' && argPlayerMove == 'kamień'){
-      printMessage('Ja wygrywam!');
-    } else if (argComputerMove =='papier' && argPlayerMove == 'nożyce'){
-      printMessage('Ty wygrywasz!');
-    } else if (argComputerMove =='papier' && argPlayerMove == 'papier'){
-      printMessage('Remis!');
-    } else if (argComputerMove =='nożyce' && argPlayerMove == 'papier'){
-      printMessage('Ja wygrywam!');
-    } else if (argComputerMove =='nożyce' && argPlayerMove == 'kamień'){
-      printMessage('Ty wygrywasz!');
-    } else if (argComputerMove=='nożyce' && argPlayerMove == 'nożyce'){
-      printMessage('Remis!');
+    console.log('Function displayResult with arguments: ' + argComputerMove +', '+ argPlayerMove + ' was called')
+    if (argComputerMove == 'rock' && argPlayerMove == 'paper'){
+      printMessage('You WON');
+    } else if (argComputerMove =='rock' && argPlayerMove == 'scissors'){
+      printMessage('You LOST');
+    } else if (argComputerMove =='rock' && argPlayerMove == 'rock'){
+      printMessage('Draw');
+    } else if (argComputerMove =='paper' && argPlayerMove == 'rock'){
+      printMessage('You LOST');
+    } else if (argComputerMove =='paper' && argPlayerMove == 'scissors'){
+      printMessage('You WON');
+    } else if (argComputerMove =='paper' && argPlayerMove == 'paper'){
+      printMessage('Draw');
+    } else if (argComputerMove =='scissors' && argPlayerMove == 'paper'){
+      printMessage('You LOST');
+    } else if (argComputerMove =='scissors' && argPlayerMove == 'rock'){
+      printMessage('You WON');
+    } else if (argComputerMove=='scissors' && argPlayerMove == 'scissors'){
+      printMessage('Draw');
     } else {
-      printMessage('Wybierz liczbę od 1 do 3!')
+      printMessage('Choose a number between 1 and 3')
     }
   }
 
 
   let argPlayerMove = getMoveName(playerInput); 
-  console.log('Ruch gracza to: ' + argPlayerMove)
+  console.log('Player move: ' + argPlayerMove)
 
   let randomNumber = Math.floor(Math.random() * 3 + 1);
-  console.log('Wylosowana liczba to: ' + randomNumber);
+  console.log('Drawn number: ' + randomNumber);
 
   let argComputerMove = getMoveName(randomNumber);
-  console.log('Ruch komputera to: ' + argComputerMove)
+  console.log('Computer move: ' + argComputerMove)
 
-  printMessage('Mój ruch to: ' + argComputerMove);
+  printMessage('My move: ' + argComputerMove);
 
-  printMessage('Twój ruch to: ' + argPlayerMove);
+  printMessage('Your move: ' + argPlayerMove);
 
   displayResult(argComputerMove, argPlayerMove);
 

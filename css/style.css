@@ -2,15 +2,21 @@ body {
   text-align: center;
 }
 
-header {
-  font-size: 25px;
-  font-family: "Lobster", cursive;
+header h1 {
+  font-size: 50px;
+  font-family: "Cousine", monospace;
+}
+
+header h2 {
+  font-size: 60px;
+  font-family: "Monoton", cursive;
   letter-spacing: 5px;
   color: #1E8449;
+  word-spacing: 10px;
 }
 
 .container button {
-  font-family: "Lobster", cursive;
+  font-family: "Cousine", monospace;
   font-size: 30px;
   margin: 40px 25px;
   padding-bottom: 10px;
@@ -37,14 +43,18 @@ header {
 
 .container #messages {
   font-family: "Cousine", monospace;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 2;
-  padding-top: 30px;
+  padding-top: 20px;
+  transition: all 1s;
 }
 
 .container #messages div:nth-of-type(3) {
-  font-weight: bold;
+  font-family: "Monoton", cursive;
+  word-spacing: 15px;
   font-size: 30px;
   color: #F5B041;
+  transition-delay: 1s;
+  padding-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */

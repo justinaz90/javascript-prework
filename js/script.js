@@ -1,4 +1,7 @@
 { 
+let playerScore = 0;
+let computerScore = 0;
+
 const playGame = function(playerInput){
   clearMessages();
 
@@ -26,25 +29,31 @@ const playGame = function(playerInput){
   }
 
   const displayResult = function(ComputerMove, PlayerMove){
-    printMessage('My move: ' + ComputerMove);
+    printMessage('Computer\'s move: ' + ComputerMove);
     printMessage('Your move: ' + PlayerMove);
     console.log('Function displayResult with arguments: ' + ComputerMove +', '+ PlayerMove + ' was called')
     if (ComputerMove == 'rock' && PlayerMove == 'paper'){
       printMessage('YOU WON!');
+      playerScore = playerScore + 1;
     } else if (ComputerMove =='rock' && PlayerMove == 'scissors'){
       printMessage('YOU LOST :(');
+      computerScore = computerScore + 1;
     } else if (ComputerMove =='rock' && PlayerMove == 'rock'){
       printMessage('DRAW');
     } else if (ComputerMove =='paper' && PlayerMove == 'rock'){
       printMessage('YOU LOST :(');
+      computerScore = computerScore + 1;
     } else if (ComputerMove =='paper' && PlayerMove == 'scissors'){
       printMessage('YOU WON!');
+      playerScore = playerScore + 1;
     } else if (ComputerMove =='paper' && PlayerMove == 'paper'){
       printMessage('DRAW');
     } else if (ComputerMove =='scissors' && PlayerMove == 'paper'){
       printMessage('YOU LOST :(');
+      computerScore = computerScore + 1;
     } else if (ComputerMove =='scissors' && PlayerMove == 'rock'){
       printMessage('YOU WON!');
+      playerScore = playerScore + 1;
     } else if (ComputerMove=='scissors' && PlayerMove == 'scissors'){
       printMessage('DRAW');
     } else {
@@ -52,6 +61,9 @@ const playGame = function(playerInput){
     }
   }
   displayResult(ComputerMove, PlayerMove);
+ // printResult ("RESULT:")
+  printResult ('You '+ playerScore + ' - ' + computerScore + ' Computer');
+
 }
 
 document.getElementById('play-rock').addEventListener('click', function(){
